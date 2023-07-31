@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Verificador de Idade</title>
+  <style>
+    body {
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    margin-top: 10px ;
+    padding-top: 160px;
+    background-image: url('cinema 2.jpg');
+  
+}
+#app {
+  border: 50px solid black;
+}
+#resultMessage {
+    border: 30px solid white;
+}
+ 
+
+h1 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Verificador de Idade</h1>
+    <label for="dayInput">Dia:</label>
+    <input type="number" id="dayInput" min="1" max="31">
+    <label for="monthInput">Mês:</label>
+    <input type="number" id="monthInput" min="1" max="12">
+    <label for="yearInput">Ano:</label>
+    <input type="number" id="yearInput" min="1900" max="2100">
+    <button id="checkButton">Verificar Idade</button>
+    <p id="resultMessage"></p>
+  </div>
+  <br>
+  <br>
+  <br>
+    <div id="popup">
+        <h1>Qual é o seu nome?</h1>
+        <input type="text" name="name" />
+        <input type="submit" value="Enviar" />
+        </div>
+        <div>
+        <script>
+        function showPopup() {
+          document.getElementById("popup").style.display = "block";
+        }
+        
+        function hidePopup() {
+          document.getElementById("popup").style.display = "none";
+        }
+        {const nome = prompt("Qual é o seu nome?");
+const dataNascimento = prompt("Qual é a sua data de nascimento? (dd/mm/aaaa)");
+
+const idade = getAge(dataNascimento);
+
+if (idade >= 18) {
+  console.log(`Olá, ${nome}! Você tem ${idade} anos e é maior de idade.`);
+} else {
+  console.log(`Olá, ${nome}! Você tem ${idade} anos e é menor de idade.`);
+    }
+}
+    </script>
+  <script src="seu_arquivo_js.js"></script>
+</body>
+</html>
